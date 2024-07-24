@@ -4,11 +4,9 @@
 */
 :root {
   --main-font: 'IBM Plex mono';
-  --accent-font: 'IBM Plex mono';
   --bg-color: #000028;
   --main-text-color: #F1B2CE;
   --heading-title-color: #DB00FF;
-  --heading-text-color: #000028;
   --article-title-color:#000028;
   --card-title-color: #FF0070;
   --accent-color: #FF0070;
