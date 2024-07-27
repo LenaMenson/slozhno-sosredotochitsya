@@ -11,4 +11,7 @@
   --card-title-color: #FF0070;
   --accent-color: #FF0070;
   --rec-color: #FF0070;
+  --circle-radius: 9px;
+  --header-rec: 'REC';
+  --border-color-hover: rgba(255, 0, 112, 0.4);
 }

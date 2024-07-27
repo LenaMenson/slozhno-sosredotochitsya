@@ -3,7 +3,7 @@
 
 .page {
   margin: 0;
-  font-family: var(--main-font, monospace);
+  font-family: var(--main-font), monospace;
   background-color: var(--bg-color);
   background-image: url(../images/cover-image-dark.png);
   background-position: center;
@@ -56,20 +56,20 @@
   position: absolute;
   top:18px;
   right: 9px;
-  width: 9px;
-  height: 9px;
+  width: var(--circle-radius);
+  height: var(--circle-radius);
   border-radius: 50%;
   box-shadow: 0px 0px 4px 2px var(--rec-color);
   background-color: var(--rec-color);
 }
 
 .hidden::after {
-  content: 'REC';
+  content: var(--header-rec);
   position: absolute;
   top:10px;
   right: 28px;
   color: var(--rec-color);
-  font-family: var(--main-font, monospace);
+  font-family: var(--main-font), monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
@@ -94,7 +94,7 @@
   height: 26px;
   border: 1px solid transparent;
   color: var(--card-title-color);
-  font-family: var(--main-font, monospace);
+  font-family: var(--main-font), monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 1;
@@ -110,18 +110,21 @@
   pointer-events: none;
 }
 
-.header__theme-menu-button:focus {
-outline: none;
+.header__theme-menu-button:hover {
+  border: 1px solid var(--border-color-hover);
+  outline: none;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:focus-visible {
-  outline: 1px solid var(--card-title-color);
+  border-bottom: 1px solid var(--card-title-color);
+  outline: none;
 }
 
 
 .header__title {
   color: var(--heading-title-color);
-  font-family: var(--main-font, monospace);
+  font-family: var(--main-font), monospace;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 0.825;
@@ -141,7 +144,7 @@ outline: none;
   width: 100%;
   min-width: 355px;
   color: var(--article-title-color);
-  font-family: var(--main-font, monospace);
+  font-family: var(--main-font), monospace;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3;
@@ -149,7 +152,7 @@ outline: none;
   padding-right: 30px;
 }
 
-.break {
+.header__article-text-break {
   white-space: nowrap;
 }
 
@@ -168,7 +171,7 @@ outline: none;
 
 .card__title {
   color: var(--card-title-color);
-  font-family: var(--main-font, monospace);
+  font-family: var(--main-font), monospace;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3;
@@ -189,7 +192,7 @@ outline: none;
 
 .card__block_article-title {
   color: var(--article-title-color);
-  font-family: var(--main-font, monospace);
+  font-family: var(--main-font), monospace;
   font-weight: 700;
   font-size: 18px;
   line-height: 1.3;
@@ -202,7 +205,7 @@ outline: none;
 
 .card__block_article-chapter-title {
   color: var(--article-title-color);
-  font-family: var(--main-font, monospace);
+  font-family: var(--main-font), monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.3;
@@ -211,7 +214,7 @@ outline: none;
 
 .card__text {
   color: var(--main-text-color);
-  font-family: var(--main-font, monospace);
+  font-family: var(--main-font), monospace;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.3;
@@ -220,17 +223,18 @@ outline: none;
 
 .card__text a {
   color: inherit;
-  text-shadow: 2px 2px 0 var(--accent-color);
   text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.card__text a:focus {
-  text-decoration: underline;
+.card__text a:hover {
+  border-bottom: 1px solid var(--main-text-color);
   outline: none;
+  cursor: pointer;
 }
 
 .card__text a:focus-visible {
-  outline: 1px solid var(--card-title-color);
+  outline: 1px solid var(--main-text-color);
 }
 
 .card__gallery {
@@ -259,7 +263,7 @@ outline: none;
 
 .footer__title {
   color: var(--heading-title-color);
-  font-family: var(--main-font, monospace);
+  font-family: var(--main-font), monospace;
   font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: 0.825;
@@ -314,8 +318,8 @@ outline: none;
   }
 
   .content {
-    padding: 60px 20px 20px 20px;
     gap: 80px;
+    padding: 60px 20px 20px 20px;
   }
 
   .card__why {
@@ -441,8 +445,8 @@ outline: none;
   }
 
   .content {
-    padding: 60px 20px 40px 20px;
     gap: 80px;
+    padding: 60px 20px 40px 20px;
   }
 
   .card__why {
